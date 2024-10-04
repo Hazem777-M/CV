@@ -1,0 +1,161 @@
+/* القواعد الأساسية */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* رأس الصفحة */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* شريط التنقل */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #444;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #666;
+}
+
+/* محتوى الصفحة */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+    flex-wrap: wrap; /* للسماح بالتفاف العناصر على الشاشات الصغيرة */
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.text {
+    max-width: 60%;
+    padding: 20px;
+}
+
+.text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.text a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.text a:hover {
+    text-decoration: underline;
+}
+
+address {
+    font-style: normal;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* استعلامات الوسائط لجعل التصميم متجاوبًا */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .image {
+        width: 150px;
+        height: 150px;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .image {
+        width: 120px;
+        height: 120px;
+    }
+
+    nav ul li a {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .text p {
+        font-size: 1em;
+    }
+
+    figcaption {
+        font-size: 1em;
+    }
+}
